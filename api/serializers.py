@@ -6,7 +6,7 @@ class EmploymentSerializer(serializers.ModelSerializer):
         model = Employment
         fields = '__all__'
 
-class ProjectsSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Projects
         fields = '__all__'

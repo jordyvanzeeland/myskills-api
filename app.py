@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from components.auth import auth
 from components.skilltypes import skilltypes
+from components.skills import skills
 from models import db
 from datetime import timedelta
 
@@ -15,6 +16,7 @@ db.init_app(app);
 
 app.register_blueprint(auth, url_prefix='/auth')
 app.register_blueprint(skilltypes, url_prefix='/skilltypes')
+app.register_blueprint(skills, url_prefix='/skills')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

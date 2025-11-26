@@ -62,7 +62,7 @@ def insertType():
         db.session.add(new_type)
         db.session.commit()
 
-        return jsonify({'message': 'New skills type added'}), 201
+        return jsonify({'message': 'New skills type added', "data": new_type}), 201
     except Exception as e:
         return jsonify({'error': str(e)}), 401
     
